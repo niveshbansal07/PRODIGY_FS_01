@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #5a2d82;
+            --primary-dark: #5a2d82;
+            --bg: #f5f3ff;
+            --card: #ffffff;
+            --text: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: "Segoe UI", sans-serif; */
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .navbar h1 {
+            font-size: 22px;
+        }
+
+        .logout-btn {
+            background: #fff;
+            color: var(--primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #e9d5ff;
+        }
+
+        /* Main */
+        .container {
+            padding: 30px;
+            height: 70vh;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .welcome p {
+            color: #6b7280;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #5b5f65;
+            font-size: 14px;
+            bottom: 0;
+        }
+
+        .footer-link {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .navbar h1 {
+                font-size: 18px;
+            }
+
+            .logout-btn {
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome</h2>
+            <p>You are logged in successfully.</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Profile</h3>
+                <p>View and update your personal information.</p>
+            </div>
+
+            <div class="card">
+                <h3>Settings</h3>
+                <p>Manage account preferences and security.</p>
+            </div>
+
+            <div class="card">
+                <h3>Analytics</h3>
+                <p>Check your usage and activity insights.</p>
+            </div>
+
+            <div class="card">
+                <h3>Support</h3>
+                <p>Get help and contact support team.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 PRODIGY App. All rights reserved. | Made by <a href="https://nivesh-bansal.vercel.app/"
+            class="footer-link">Nivesh Bansal </a> ❤️
+    </footer>
+
+
+    <!-- JS -->
+    <script>
+        function logout() {
+            window.location.href = "/logout";
+        }
+    </script>
+
+</body>
+
+</html>

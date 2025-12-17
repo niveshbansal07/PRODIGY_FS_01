@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #5a2d82;
+            --primary-dark: #5a2d82;
+            --bg: #f5f3ff;
+            --card: #ffffff;
+            --text: #1f2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: "Segoe UI", sans-serif; */
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .navbar h1 {
+            font-size: 22px;
+        }
+
+        .my-intro {
+            background: #fff;
+            color: var(--primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-link {
+            color: #5a2d82;
+            text-decoration: none;
+        }
+
+
+        .my-intro:hover {
+            background: #e9d5ff;
+        }
+
+
+        /* Main */
+        .container {
+            padding: 30px;
+            height: 70vh;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #5b5f65;
+            font-size: 14px;
+            bottom: 0;
+        }
+
+        .footer-link {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .navbar h1 {
+                font-size: 18px;
+            }
+
+            .my-intro {
+                padding: 6px 12px;
+            }
+        }
+
+        .btn {
+            appearance: none;
+            border: none;
+            outline: none;
+            height: 44px;
+            padding: 0 22px;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.8s ease-in-out;
+            background: #5a2d82;
+            box-shadow: 0 6px 16px rgba(90, 45, 130, 0.35);
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            text-decoration:none;
+        }
+
+        .form-actions {
+            margin-top: 8px;
+            display: flex;
+            gap: 12px;
+            width:100%;
+            align-items:center;
+            justify-content:center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Prodigy User Authentication System </h1>
+        <div class="my-intro"><a href="https://nivesh-bansal.vercel.app/" class="nav-link">Nivesh Bansal </a></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="form-actions">
+            <button class="btn">
+                <a class="btn-primary" href="{{ url_for('signup') }}" class="link">SIGN UP</a>
+            </button>
+            <button class="btn">
+                <a class="btn-primary" href="{{ url_for('login') }}" class="link">LOG IN</a>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 PRODIGY App. All rights reserved. | Made by <a href="https://nivesh-bansal.vercel.app/"
+            class="footer-link">Nivesh Bansal </a> ❤️
+    </footer>
+
+
+    <!-- JS -->
+    <script>
+        function logout() {
+            window.location.href = "/logout";
+        }
+    </script>
+
+</body>
+
+</html>
