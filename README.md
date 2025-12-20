@@ -6,6 +6,9 @@ It is created as part of an **internship project (Prodigy)** to demonstrate real
 The application includes secure **user registration, login, session handling**, and animated success/error pages.
 
 ---
+![Preview](https://github.com/niveshbansal07/PRODIGY_FS_01/blob/main/Signup%20Page%20-%20Brave%2012_18_2025%203_29_23%20PM.png)
+![Preview](https://github.com/niveshbansal07/PRODIGY_FS_01/blob/main/Signup%20Page%20-%20Brave%2012_18_2025%203_29_32%20PM.png)
+![Preview](https://github.com/niveshbansal07/PRODIGY_FS_01/blob/main/Signup%20Page%20-%20Brave%2012_18_2025%203_29_52%20PM.png)
 
 ## 🚀 Features
 
